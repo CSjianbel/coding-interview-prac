@@ -4,7 +4,11 @@ This repository will contain my solutions to coding interview questions by Byte 
 
 ## Notes 
 
-1. 
+1. Never be afraid to ask for clarifications
+   - Any aspect of the problem that may seem unclear or confusing, ask ofr help. 
+2. Clarify the constraints of the problem
+   - Can N ever be negative? 
+   - Can I assume that X will never be greater than string A?
 
 ## Reference
 
