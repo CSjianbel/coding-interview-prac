@@ -1,11 +1,17 @@
 #include <iostream>
 using namespace std;
 
-// 1 -> 2 -> 3 -> 4 -> 5 -> 6 -> 7 -> 8 NULL
-//                                    ^
-// tmp
-//                ^
-// res
+/*
+ * Porblem Statement:
+ *
+ * Split Linked List:
+ *
+ * - Given a singly linked list
+ * - Split the list in half 
+ * - Your function must return the head of the second half of the List
+ * - In the case of odd length lists, the first half will have the extra node
+ * - The first half must also be disconnected from the seccond half
+ */
 struct Node {
   int data;
   Node* next;
@@ -68,11 +74,14 @@ int main(void) {
     prepend(&head, tmp);
   }
 
+  cout << "Input list: ";
   print(head);
 
   Node* second_half = splitList(head);
 
+  cout << "First half: ";
   print(head);
+  cout << "Second half: ";
   print(second_half);
 
   return 0;
