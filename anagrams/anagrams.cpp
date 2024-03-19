@@ -13,19 +13,19 @@ using namespace std;
 bool anagrams(string a, string b) {
   if (a.length() != b.length()) return false;
 
-  int chars[26] = {-1};
+  int chars[26] = {0};
 
   for (char c : a) {
-    int idx = (int) c - 'a';
-    if (chars[idx] == -1) chars[idx] = 0;
-    chars[idx]++;
+    chars[(int) c - 'a']++;
   }
 
   for (char c : b) {
-    int idx = (int) c - 'a';
-    if (chars[idx] == -1) return false;
-    chars[idx]--;
-    if (chars[idx] < 0) return false;
+    chars[(int) c - 'a']--;
+  }
+
+  for (int i = 0; i < 26; i++) {
+    if (chars[i] != 0)
+      return false;
   }
 
   return true;
