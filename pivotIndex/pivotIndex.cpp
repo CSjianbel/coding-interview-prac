@@ -1,6 +1,23 @@
 #include <iostream>
 using namespace std;
 
+/*
+ * Problem Statement:
+ *
+ * Find Pivot Index:
+ *
+ * - Given an array of numbers
+ * - Find the index such that the sum of numbers to left and right are equal
+ * - If no such pivot index exists, return -1 
+ * - If multiple pivot indices exists, return the leftmost index
+ *
+ * e.g. 
+ *
+ * [7, 3, 1, 10, 7 4]
+ *
+ * pivot_index = 3
+ */
+
 int findPivotIndex(int n, int *arr) {
   int res = -1, left = 0, right = 0;
 
